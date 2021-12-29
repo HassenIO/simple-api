@@ -1,0 +1,9 @@
+kind: pipeline
+name: default
+
+steps:
+- name: test
+  image: python:3.9-slim-buster
+  commands:
+  - pip install --no-cache-dir -r requirements-dev.txt
+  - pytest
