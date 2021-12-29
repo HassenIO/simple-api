@@ -4,7 +4,6 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip3 install --no-cache-dir -r requirements.txt
 
-COPY main.py .
+COPY src/server.py .
 
-CMD uvicorn --host 0.0.0.0 --port 8081 main:app
-
+CMD uvicorn --host 0.0.0.0 --port 8081 server:app
