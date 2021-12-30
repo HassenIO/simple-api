@@ -4,6 +4,9 @@ name: default
 steps:
 - name: test
   image: python:3.9-slim-buster
+  when:
+    event:
+    - push
   commands:
   - pip install --no-cache-dir -r requirements-dev.txt
   - pytest
