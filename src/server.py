@@ -11,5 +11,6 @@ class Data(BaseModel):
 
 @app.post("/")
 def handle_post(data: Data) -> Data:
+    """Just return the given message with status 200"""
     return data
 
